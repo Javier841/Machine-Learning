@@ -1,26 +1,56 @@
 ## Curso Machine Learning
 
-En esta sección se desarrollan distintos modelos y técnicas fundamentales de **Machine Learning**, combinando teoría con implementaciones prácticas en Python aplicadas a datasets reales.
+En esta sección se desarrollan modelos y técnicas fundamentales de machine learning, combinando teoría con implementaciones prácticas en Python aplicadas a datasets reales.
 
-Se trabaja con problemas de regresión, clasificación, reducción de dimensionalidad y modelos de series temporales, permitiendo comprender cómo aplicar algoritmos de aprendizaje automático en distintos contextos.
+Se cubren problemas de regresión, clasificación, reducción de dimensionalidad y predicción de series temporales, permitiendo entender cómo aplicar algoritmos de aprendizaje automático en distintos escenarios.
 
-Se utilizan datasets como **50 Startups**, donde se implementa el modelo de **Regresión Lineal** y **Regresión Lineal Múltiple** para analizar la relación entre variables y predecir resultados continuos.
+---
 
-También se abordan modelos de **clasificación**, como la **regresión logística**, utilizando la librería *scikit-learn*, lo que permite resolver problemas de predicción de variables categóricas.
+### Regresión lineal y múltiple
 
-En cuanto a la reducción de dimensionalidad, se estudian técnicas como:
+Se trabaja con datasets como **50 Startups** y **advertising** para implementar modelos de regresión lineal simple y múltiple. El objetivo es analizar la relación entre variables independientes y predecir valores continuos, evaluando el ajuste del modelo mediante métricas como R², error cuadrático medio y análisis de residuos.
 
-- **PCA (Análisis de Componentes Principales)**, que permite transformar datos de alta dimensión en un espacio más reducido conservando la mayor varianza posible.  
-- **LDA (Análisis Discriminante Lineal)**, una técnica supervisada que busca maximizar la separabilidad entre clases, ayudando a reducir el sobreajuste y mejorar el rendimiento del modelo.  
+---
 
-Estas técnicas permiten:
-- Analizar la correlación entre variables  
-- Reducir la complejidad de los datos  
-- Visualizar datos de alta dimensión en espacios de menor dimensión  
-- Evaluar el impacto del número de componentes en el rendimiento del modelo  
+### Clasificación con regresión logística
 
-Además, se incluyen modelos lineales regularizados como **Ridge** y **Lasso**, que ayudan a prevenir el sobreajuste mediante la penalización de los coeficientes del modelo.
+Se implementa regresión logística utilizando scikit-learn para resolver problemas de clasificación binaria. Este modelo permite estimar la probabilidad de pertenencia a una clase a partir de las variables de entrada, siendo uno de los métodos más utilizados como baseline en problemas de clasificación.
 
-Por otro lado, se introduce el uso de redes neuronales recurrentes, específicamente el modelo **LSTM (Long Short-Term Memory)**, aplicado a la predicción de precios de acciones. Este enfoque permite capturar dependencias temporales en datos secuenciales, siendo especialmente útil en series de tiempo financieras.
+---
 
-En conjunto, esta sección proporciona una visión integral de técnicas clave de Machine Learning, desde modelos lineales hasta métodos avanzados, aplicados a problemas reales y orientados al análisis y predicción de datos.
+### Reducción de dimensionalidad
+
+Se estudian técnicas para reducir la cantidad de variables manteniendo la mayor cantidad de información posible:
+
+- **PCA (Análisis de Componentes Principales)**: técnica no supervisada que transforma los datos a un espacio de menor dimensión conservando la mayor varianza. Se analiza cómo el número de componentes afecta el rendimiento del modelo y se visualizan los datos proyectados.
+- **LDA (Análisis Discriminante Lineal)**: técnica supervisada que busca maximizar la separabilidad entre clases, reduciendo dimensiones mientras mejora la capacidad discriminativa del modelo.
+- **QDA (Análisis Discriminante Cuadrático)**: extensión de LDA que permite fronteras de decisión no lineales al estimar una matriz de covarianza por cada clase.
+
+---
+
+### Regularización: Ridge y Lasso
+
+Se implementan modelos lineales regularizados que penalizan la magnitud de los coeficientes para prevenir el sobreajuste. Se compara el comportamiento de Ridge (penalización L2) y Lasso (penalización L1) y se analiza cómo el parámetro de regularización afecta la complejidad del modelo.
+
+---
+
+### Series temporales con LSTM
+
+Se introduce el uso de redes neuronales recurrentes LSTM (Long Short-Term Memory) para la predicción de precios de acciones. Este enfoque captura dependencias temporales en datos secuenciales, siendo especialmente adecuado para series de tiempo financieras donde los patrones históricos influyen en valores futuros.
+
+---
+
+### Notebooks
+
+- `regresion_01.ipynb` — Regresión lineal simple
+- `Ejemplo_de_regresión_múltiple.ipynb` — Regresión lineal múltiple
+- `Regresion_logistica.ipynb` — Clasificación con regresión logística
+- `PCA_ejemplo.ipynb` — Ejemplo introductorio de PCA
+- `PCA_Implementacion.ipynb` — Implementación completa de PCA
+- `PCA y Regresión.ipynb` — Combinación de PCA con modelos de regresión
+- `LDA_01.ipynb` — Análisis Discriminante Lineal
+- `QDA.ipynb` — Análisis Discriminante Cuadrático
+- `Ridge_Lasso.ipynb` — Regularización Ridge y Lasso
+- `Ridge_regresion-1.ipynb` — Regresión Ridge aplicada
+- `LSTM.ipynb` — Predicción de series temporales con LSTM
+- `Multiple Linear Regression Exercise Solution.ipynb` — Ejercicio resuelto de regresión múltiple

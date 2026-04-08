@@ -1,51 +1,50 @@
-# Ciencia de Datos
+## Ciencia de Datos
 
-Este repositorio reúne diferentes prácticas, conceptos y aplicaciones relacionadas con el campo de la **Ciencia de Datos**, integrando herramientas de análisis, bases de datos, procesamiento de información y técnicas de aprendizaje a partir de datos reales.
-
----
-
-## 🧭 Descripción general
-
-El contenido del repositorio está orientado a desarrollar habilidades prácticas en:
-
-- Manipulación y análisis de datos  
-- Conexión a bases de datos  
-- Procesamiento de información estructurada y no estructurada  
-- Análisis exploratorio de datos  
-- Procesamiento de lenguaje natural (NLP)  
-
-Todo ello utilizando Python como lenguaje principal.
+En esta sección se reúnen prácticas y aplicaciones relacionadas con el campo de la ciencia de datos, integrando herramientas de análisis, bases de datos y procesamiento de información sobre datos reales.
 
 ---
 
-## 📦 Fuentes de datos
+### Análisis de datos con Pandas
 
-Se trabaja con diferentes conjuntos de datos, como:
+Se utiliza la librería Pandas para el análisis exploratorio de datos, incluyendo:
 
-- Datos de películas (IMDB)  
-- Datos de texto para análisis de sentimientos  
+- Carga de datasets en distintos formatos (`.csv`, `.sqlite`)
+- Exploración inicial con métodos como `.head()`, `.describe()`, `.info()`
+- Limpieza y transformación de datos
+- Filtrado, agrupación y agregación de información
+- Preparación de datos para análisis posteriores o modelos predictivos
 
-Estos datasets permiten aplicar técnicas de análisis tanto numérico como textual.
-
----
-
-## 🗄️ Conexión a bases de datos (MongoDB)
-
-Se incluye el uso de **MongoDB** como base de datos NoSQL, utilizando la librería `pymongo` para:
-
-- Establecer conexión con un clúster  
-- Validar la conexión mediante comandos como `ping`  
-- Preparar el entorno para almacenamiento y consulta de datos  
-
-Esto permite trabajar con datos no estructurados y escalables.
+Se trabaja con el dataset de IMDB, que contiene información sobre películas, permitiendo aplicar técnicas de manipulación sobre datos reales con estructura tabular.
 
 ---
 
-## 📊 Análisis de datos con Pandas
+### Bases de datos NoSQL con MongoDB
 
-Se emplea la librería `pandas` para:
+Se introduce MongoDB como base de datos NoSQL, utilizando la librería `pymongo` para:
 
-- Cargar datasets (`.csv`)  
-- Explorar datos con métodos como `.head()`  
-- Limpiar y transformar información  
-- Preparar los datos para análisis posteriores  
+- Establecer conexión con un clúster de MongoDB Atlas
+- Validar la conexión mediante comandos como `ping`
+- Realizar operaciones CRUD (crear, leer, actualizar, eliminar)
+- Ejecutar consultas y agregaciones sobre colecciones de documentos
+
+Este enfoque permite trabajar con datos no estructurados y esquemas flexibles, complementando las bases de datos relacionales tradicionales.
+
+---
+
+### Análisis de sentimientos
+
+Se aplican técnicas de procesamiento de texto y clasificación para analizar el sentimiento en reseñas de películas, combinando preprocesamiento de texto con modelos de clasificación para determinar si una reseña es positiva o negativa.
+
+---
+
+### Notebooks
+
+- `PANDAS.ipynb` — Análisis y exploración de datos con Pandas
+- `MongoDB.ipynb` — Introducción y conexión a MongoDB
+- `PyMongo.ipynb` — Operaciones con PyMongo
+- `SENTIMENT_Pelis.ipynb` — Análisis de sentimientos en reseñas de películas
+
+### Datos
+
+- `IMDB-Movie-Data.csv` — Dataset tabular de películas
+- `IMDB.sqlite` — Base de datos SQLite con información de IMDB

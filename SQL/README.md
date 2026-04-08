@@ -1,51 +1,46 @@
 ## SQL
 
-SQL (*Structured Query Language*) es un lenguaje especializado utilizado para gestionar y manipular datos almacenados en sistemas de bases de datos relacionales (**RDBMS**). Es una herramienta fundamental en áreas como análisis de datos, ciencia de datos y desarrollo de software.
+En esta sección se trabaja con SQL (Structured Query Language), el lenguaje estándar para gestionar y manipular datos en sistemas de bases de datos relacionales.
 
 ---
 
-## 🧭 Ruta de aprendizaje
+### Bases de datos relacionales
 
-### 1. Introducción a bases de datos relacionales
-
-Una **base de datos relacional** almacena información en múltiples tablas relacionadas entre sí.
-
-Características principales:
-- Datos organizados en **filas y columnas**  
-- Cada fila representa un registro único  
-- Cada columna define un tipo de dato específico  
-- Relaciones entre tablas mediante claves (keys)  
-
-Esto permite realizar consultas complejas combinando información de distintas fuentes.
+Una base de datos relacional organiza la información en tablas relacionadas entre sí, donde cada fila representa un registro único y cada columna define un tipo de dato específico. Las relaciones entre tablas se establecen mediante claves primarias y foráneas, permitiendo realizar consultas complejas que combinan información de múltiples fuentes.
 
 ---
 
-### 2. Sistemas de gestión de bases de datos (DBMS)
+### Sistemas de gestión (DBMS)
 
-Un **DBMS (Database Management System)** es el software encargado de administrar bases de datos.
-
-Algunos ejemplos populares:
-- MySQL  
-- PostgreSQL  
-- SQLite  
-- Oracle Database  
-- IBM Db2  
-
-Aunque existen múltiples sistemas, todos utilizan SQL como lenguaje estándar, lo que facilita trabajar con diferentes tecnologías una vez dominados los fundamentos.
+Aunque existen múltiples sistemas de gestión de bases de datos (MySQL, PostgreSQL, SQLite, Oracle, IBM Db2), todos utilizan SQL como lenguaje estándar. En esta sección se trabaja con **SQLite**, que permite ejecutar consultas directamente desde Python sin necesidad de un servidor externo, lo cual lo hace ideal para prototipado y análisis de datos.
 
 ---
 
-### 3. SQL como herramienta en ciencia de datos
+### SQL aplicado a ciencia de datos
 
-SQL es una herramienta clave para:
-- Consultar grandes volúmenes de datos  
-- Filtrar información relevante  
-- Realizar agregaciones (SUM, AVG, COUNT)  
-- Unir tablas (JOIN)  
-- Preparar datos para análisis o modelos  
+SQL es una herramienta fundamental en el flujo de trabajo de un data scientist, permitiendo:
 
-Por ello, es una habilidad esencial en el flujo de trabajo de un **data scientist**.
+- Consultar y filtrar grandes volúmenes de datos
+- Realizar agregaciones (SUM, AVG, COUNT, MAX, MIN)
+- Combinar tablas mediante JOINs (INNER, LEFT, RIGHT, FULL)
+- Crear subconsultas y vistas
+- Preparar datos para análisis o modelos de machine learning
 
 ---
 
-### 4. Integración con Python
+### Integración con Python
+
+Se utiliza la librería `sqlite3` para conectar Python con bases de datos SQLite, permitiendo ejecutar consultas SQL directamente desde notebooks de Jupyter y cargar los resultados en DataFrames de Pandas para su posterior manipulación y análisis.
+
+---
+
+### Notebooks
+
+- `SQL.ipynb` — Fundamentos de SQL: SELECT, WHERE, ORDER BY, GROUP BY
+- `SQL 2-2.ipynb` — Consultas avanzadas, JOINs y subconsultas
+- `Sqlite_IMDB.ipynb` — Análisis de datos de IMDB con SQLite
+
+### Datos
+
+- `movie.sqlite` — Base de datos de películas
+- `SQL 2 - Clients.pdf` — Ejercicios con datos de clientes

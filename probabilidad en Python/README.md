@@ -1,35 +1,66 @@
 ## Probabilidad en Python
 
-En esta sección se introduce el estudio de la probabilidad utilizando Python como herramienta principal para la resolución de problemas.
+En esta sección se estudia la probabilidad utilizando Python como herramienta principal para la resolución de problemas, combinando implementación desde cero con el uso de librerías científicas.
 
-Se desarrollan ejemplos prácticos de cálculo de probabilidades, en los cuales se construyen funciones desde cero (sin el uso de librerías especializadas en probabilidad) para resolver distintos casos de estudio, tales como:
-- Problemas de extracción de urnas  
-- Problema de Newton aplicado al lanzamiento de dados  
+---
 
-Estos ejercicios permiten comprender paso a paso la lógica detrás de los cálculos probabilísticos, reforzando el aprendizaje mediante la implementación directa en código.
+### Cálculo de probabilidades desde cero
 
-Asimismo, se incluyen ejemplos gráficos relacionados con:
-- Frecuencias  
-- Distribuciones de probabilidad  
-- Esperanza matemática  
-- Varianza  
+Se construyen funciones sin librerías especializadas para resolver distintos problemas clásicos de probabilidad:
 
-Para ello, se hace uso de herramientas como **NumPy** y **Matplotlib**, facilitando la visualización e interpretación de los resultados.
+- Problemas de extracción de urnas
+- Problema de Newton aplicado al lanzamiento de dados
+
+Este enfoque permite comprender paso a paso la lógica detrás de cada cálculo probabilístico, reforzando el aprendizaje mediante la implementación directa en código antes de recurrir a herramientas automatizadas.
+
+---
+
+### Distribuciones y visualización
+
+Se trabajan conceptos fundamentales de probabilidad con NumPy y Matplotlib:
+
+- Frecuencias y distribuciones de probabilidad
+- Esperanza matemática y varianza
+- Función de densidad normal (gaussiana)
+- Simulación de variables aleatorias bajo distintas distribuciones
+
+Las visualizaciones gráficas permiten interpretar el comportamiento de las distribuciones y conectar la formulación matemática con su representación visual.
+
+---
 
 ### Muestreo aleatorio con NumPy
 
-Se aborda el muestreo aleatorio a través del **Ensayo de Bernoulli**, utilizando el ejemplo del lanzamiento de una moneda:
+Se aborda el muestreo aleatorio partiendo del ensayo de Bernoulli como modelo básico. Usando el ejemplo del lanzamiento de una moneda, se define el espacio muestral, la variable aleatoria y la asignación de probabilidades. Este enfoque se extiende para simular experimentos más complejos y analizar sus resultados de forma programática.
 
-- Espacio muestral: $\Omega = \{\text{águila}, \text{sol}\}$  
-- Variable aleatoria: $X:\Omega \to \{0,1\}$  
-- Asignación de probabilidad:  
-  - $\mathbb{P}(X(\text{sol}) = 1) = p \in (0,1)$  
-  - $\mathbb{P}(X(\text{águila}) = 0) = 1 - p \in (0,1)$  
-
-Este enfoque permite simular experimentos aleatorios y analizar sus resultados mediante programación.
+---
 
 ### Ruina del jugador
 
-También se introduce el problema de la **ruina del jugador**, un modelo clásico de probabilidad que describe la evolución del capital de un jugador que participa en apuestas repetidas. Este problema permite analizar la probabilidad de que el jugador pierda todo su dinero (ruina) o alcance un objetivo, en función de sus probabilidades de ganar y su capital inicial.
+Se implementa el problema clásico de la ruina del jugador, un modelo que describe la evolución del capital de un jugador en apuestas repetidas. Se analiza la probabilidad de ruina (perder todo el capital) y la probabilidad de alcanzar un objetivo, en función de las probabilidades de ganar en cada apuesta y el capital inicial.
 
 ---
+
+### Teorema Central del Límite y convergencia
+
+Se incluye material sobre el Teorema Central del Límite, sucesiones de variables aleatorias, convergencia débil y distribución de Lévy, proporcionando la base teórica para entender por qué la distribución normal aparece de forma recurrente en estadística.
+
+---
+
+### Notebooks principales
+
+- `Cálculo de Probabilidades.ipynb` — Problemas resueltos desde cero
+- `Probabilidad en Python.ipynb` — Fundamentos de probabilidad
+- `Gaussiana.ipynb` — Distribución normal y densidad
+- `Probabilidad_densidad_normal.ipynb` — Densidad normal en detalle
+- `Muestreo_NumPy.ipynb` — Muestreo aleatorio con NumPy
+- `Ruina_del_jugador.ipynb` — Simulación del modelo de ruina
+- `Simulación de variables aleatorias y aproximaciones.ipynb` — Simulaciones
+- `Simulación normal.ipynb` — Simulación de la distribución normal
+- `Variación_de_la_muestra.ipynb` — Varianza y variación muestral
+- `Frequencía+y+Distribución.ipynb` — Frecuencias y distribuciones
+- `Ejercicios_clase0.ipynb` — Ejercicios introductorios
+- `Probabilidad_colaboratory_clase4.ipynb` — Ejercicios en Colab
+
+### Material teórico
+
+Incluye PDFs sobre sucesiones, Teorema Central del Límite, convergencia débil y distribución de Lévy.

@@ -1,93 +1,44 @@
 ## Estadística Inferencial
 
-En esta sección se abordan conceptos de la **estadística inferencial** mediante un enfoque teórico y práctico utilizando Python.
-
-Se trabaja con modelos probabilísticos, simulaciones y técnicas de estimación.
+En esta sección se abordan conceptos de estadística inferencial mediante un enfoque teórico y práctico, utilizando Python para simulaciones, estimación de parámetros y pruebas de hipótesis.
 
 ---
 
-### 📌 Modelos de distribución
+### Modelos de distribución
 
-Se analiza una muestra aleatoria $X_1, \dots, X_n$ cuya función de densidad está dada por:
-
-$$
-f_X(x;\theta)=
-\begin{cases}
-\theta x^{\theta-1} & 0 < x < 1,\ \theta > 0 \\
-0 & \text{en otro caso}
-\end{cases}
-$$
-
-Asimismo, se explora la **distribución Beta**, utilizando herramientas como `NumPy`, `Matplotlib` y `SciPy` para:
-- Generar muestras aleatorias  
-- Visualizar funciones de densidad  
-- Analizar el comportamiento de la distribución  
+Se analiza una muestra aleatoria cuya función de densidad pertenece a la familia de distribuciones Beta. Utilizando NumPy, Matplotlib y SciPy se generan muestras aleatorias, se visualizan funciones de densidad y se estudia el comportamiento de la distribución bajo distintos parámetros.
 
 ---
 
-### 📊 Simulación de distribuciones
+### Simulación de distribuciones
 
-Se realizan simulaciones con distintas distribuciones pertenecientes a la familia exponencial, tales como:
-- Distribución t de Student  
-- Distribución Beta  
-- Distribución Lognormal  
-- Distribución Gamma  
-- Distribución Poisson  
-- Distribución Exponencial  
+Se realizan simulaciones con distribuciones de la familia exponencial para estudiar empíricamente propiedades estadísticas fundamentales:
 
-A través de estas simulaciones, se estudia el comportamiento de los datos y la evolución de la **media muestral**, mostrando empíricamente la convergencia hacia la media teórica (Ley de los Grandes Números).
+- Distribución t de Student
+- Distribución Beta
+- Distribución Lognormal
+- Distribución Gamma
+- Distribución Poisson
+- Distribución Exponencial
 
----
-
-### 📈 Visualización y análisis
-
-Mediante gráficos generados con **Matplotlib**, se representan:
-- Datos simulados  
-- Trayectorias de la media muestral  
-- Comparación con la media teórica  
-
-Esto permite una comprensión visual del comportamiento estadístico de las muestras.
+A través de estas simulaciones se observa la evolución de la media muestral conforme aumenta el tamaño de muestra, mostrando de forma empírica la convergencia hacia la media teórica, lo cual ilustra la Ley de los Grandes Números.
 
 ---
 
-### 📐 Estimación por Máxima Verosimilitud (MLE)
+### Estimación por Máxima Verosimilitud (MLE)
 
-Se estudia el método de **Máxima Verosimilitud** para la estimación de parámetros.
+Se estudia el método de Máxima Verosimilitud para estimar parámetros de un modelo. Dado un modelo probabilístico y una muestra observada, se construye la función de verosimilitud, se obtiene la log-verosimilitud y se encuentra el estimador que maximiza la probabilidad de haber observado los datos. Se verifica la condición de máximo mediante la segunda derivada.
 
-Dada una variable aleatoria discreta $X$ con distribución:
+---
 
-$$
-\begin{align*}
-P(X=0)&=\frac{2}{3}\theta,\\
-P(X=1)&=\frac{1}{3}\theta,\\
-P(X=2)&=\frac{2}{3}(1-\theta),\\
-P(X=3)&=\frac{1}{3}(1-\theta)
-\end{align*}
-$$
+### Pruebas de hipótesis
 
-y una muestra observada:
+Se implementan pruebas de hipótesis estadísticas para evaluar afirmaciones sobre parámetros poblacionales a partir de datos muestrales, incluyendo la formulación de hipótesis nula y alternativa, el cálculo de estadísticos de prueba y la interpretación de p-values.
 
-$$
-(3, 0, 2, 1, 3, 2, 1, 0, 2, 1)
-$$
+---
 
-Se construye la función de verosimilitud:
+### Notebooks
 
-$$
-L(\theta) = \frac{32}{243}\theta^{5}(1-\theta)^{5}
-$$
-
-A partir de la log-verosimilitud:
-
-$$
-\log L(\theta) = \log(32/243) + 5\log(\theta) + 5\log(1-\theta)
-$$
-
-Se obtiene el estimador:
-
-$$
-\hat{\theta} = 0.5
-$$
-
-Verificando que corresponde a un máximo mediante la segunda derivada.
-
+- `Solución_Pruebas_de_hipótesis.ipynb` — Pruebas de hipótesis resueltas
+- `UMVUE_beta.ipynb` — Estimadores UMVUE y distribución Beta
+- `data.html` — Datos complementarios

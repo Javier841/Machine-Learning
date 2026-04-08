@@ -1,11 +1,23 @@
 ## Data Manipulation
 
-En esta sección se trabaja la **manipulación de datos** utilizando Python, con un enfoque práctico en la limpieza, transformación y normalización de datasets mediante la librería **pandas**, apoyándose también en **NumPy** para la generación de datos.
+En esta sección se trabaja la manipulación de datos con Python, enfocándose en la limpieza, transformación y normalización de datasets mediante Pandas y NumPy.
 
-Se utilizan tanto datos sintéticos como datos reales para comprender el flujo completo de preparación de la información. Por un lado, se generan conjuntos de datos controlados mediante distribuciones estadísticas, lo que permite entender la estructura y comportamiento de los datos. Por otro lado, se emplean archivos en formato `.csv`, como el dataset de **Students Social Media Addiction**, para trabajar con información real.
+### Contenido
 
-El proceso incluye tareas fundamentales como la limpieza de datos (manejo de valores nulos, corrección de formatos, eliminación de duplicados), así como la transformación y normalización de variables. Estas técnicas son esenciales para garantizar la calidad de los datos y prepararlos para análisis posteriores o modelos de machine learning.
+Se utilizan tanto datos sintéticos como datos reales para cubrir el flujo completo de preparación de información. Por un lado, se generan conjuntos de datos controlados a partir de distribuciones estadísticas, lo que permite entender la estructura y comportamiento esperado de los datos. Por otro lado, se trabaja con archivos `.csv` reales para enfrentar los problemas típicos de datos del mundo real.
 
-Además, se realizan operaciones de exploración y manipulación como filtrado, creación de nuevas variables y reorganización de la información, permitiendo obtener datasets más estructurados y útiles.
+El proceso cubre tareas fundamentales del preprocesamiento:
 
-En conjunto, esta sección proporciona una base sólida en el preprocesamiento de datos, una etapa clave dentro del flujo de trabajo en ciencia de datos.
+- Manejo de valores nulos y datos faltantes
+- Corrección de formatos y tipos de datos
+- Eliminación de duplicados
+- Normalización y estandarización de variables
+- Filtrado y selección de subconjuntos de datos
+- Creación de nuevas variables derivadas
+- Reorganización y reestructuración de dataframes
+
+Estas técnicas son esenciales para garantizar la calidad de los datos antes de alimentar modelos de machine learning o realizar análisis estadísticos. Un dataset mal preparado puede comprometer por completo los resultados de cualquier modelo, por lo que el preprocesamiento es una de las etapas más importantes del flujo de trabajo en ciencia de datos.
+
+### Notebooks
+
+- `Lectura_de_datos.ipynb` — Carga, exploración, limpieza y transformación de datos

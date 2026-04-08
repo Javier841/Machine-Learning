@@ -1,105 +1,67 @@
 ## Cálculo Estocástico
 
-En esta sección se presenta una **ruta de aprendizaje** para el estudio del cálculo estocástico, integrando teoría de probabilidad, procesos estocásticos y herramientas matemáticas avanzadas. El contenido está basado en diversos materiales, incluyendo libros y notas especializadas.
+En esta sección se presenta una ruta de aprendizaje para el estudio del cálculo estocástico, integrando teoría de probabilidad avanzada, procesos estocásticos y herramientas matemáticas. El contenido se basa en diversos materiales incluyendo libros y notas especializadas.
 
 ---
 
 ### Fundamentos de probabilidad avanzada
 
-Se comienza con conceptos esenciales que permiten construir una base sólida:
+Se parte de los conceptos esenciales que permiten construir una base sólida:
 
-- Espacios de probabilidad $(\Omega, \mathcal{F}, P)$  
-- Completitud de un espacio de probabilidad  
-- Conjuntos nulos y su importancia en la teoría de la medida  
+- Espacios de probabilidad (Ω, F, P)
+- Completitud de un espacio de probabilidad
+- Conjuntos nulos y su papel en la teoría de la medida
 
-Un espacio de probabilidad es **completo** si todo subconjunto de un conjunto de probabilidad cero también es medible. Esta propiedad es fundamental para evitar inconsistencias en construcciones probabilísticas más avanzadas.
+Un espacio de probabilidad es completo si todo subconjunto de un conjunto de probabilidad cero también es medible. Esta propiedad evita inconsistencias en construcciones probabilísticas más avanzadas.
 
 ---
 
 ### Variables aleatorias y tiempos de espera
 
-Se estudian variables aleatorias continuas, en particular:
-
-- Distribución exponencial  
-- Propiedades de los tiempos de espera  
-- Relojes exponenciales independientes  
-
-Si $T_1, \dots, T_n$ son variables aleatorias independientes con distribución exponencial, entonces:
-
-$$
-T = \min\{T_1, \dots, T_n\}
-$$
-
-representa el primer evento que ocurre en un sistema de múltiples procesos aleatorios.
+Se estudian variables aleatorias continuas con énfasis en la distribución exponencial y sus propiedades. Si T₁, ..., Tₙ son variables exponenciales independientes, entonces el mínimo de todas ellas representa el primer evento que ocurre en un sistema de múltiples procesos aleatorios, lo cual es fundamental para modelar sistemas de colas y procesos de Markov.
 
 ---
 
 ### Cadenas de Markov en tiempo continuo
 
-Se introduce el estudio de procesos estocásticos en tiempo continuo, incluyendo:
+Se introducen procesos estocásticos en tiempo continuo, cubriendo:
 
-- Definición de cadenas de Markov en tiempo continuo  
-- Interpretación mediante tiempos de espera  
-- Tiempos medios de paso  
-- Clasificación de estados  
-- Procesos de nacimiento y muerte  
-- Procesos de nacimiento puro  
+- Definición y propiedades de cadenas de Markov en tiempo continuo
+- Tiempos medios de paso y clasificación de estados
+- Procesos de nacimiento y muerte
+- Procesos de nacimiento puro
+- Ecuaciones forward y backward de Kolmogorov
 
-Además, se analizan las **ecuaciones forward y backward**, fundamentales para describir la evolución temporal de estos procesos.
+Estas ecuaciones describen cómo evoluciona la distribución de probabilidad del proceso a lo largo del tiempo.
 
 ---
 
-### Movimiento Browniano y procesos Gaussianos
+### Movimiento Browniano y procesos gaussianos
 
-Se estudia el **movimiento browniano** como uno de los procesos fundamentales del cálculo estocástico:
+Se estudia el movimiento Browniano como proceso fundamental del cálculo estocástico, caracterizado por incrementos independientes y estacionarios con distribución normal. Si Bₜ es un movimiento Browniano, entonces Bₜ - Bₛ tiene distribución N(0, t-s).
 
-- Definición de movimiento browniano estándar  
-- Incrementos independientes y estacionarios  
-- Distribución normal de los incrementos  
-
-Por ejemplo, si $B_t$ es un movimiento browniano, entonces:
-
-$$
-B_t - B_s \sim \mathcal{N}(0, t - s)
-$$
-
-También se analizan momentos de orden superior y propiedades de procesos gaussianos.
+Se analizan momentos de orden superior y propiedades de procesos gaussianos que generalizan el movimiento Browniano.
 
 ---
 
 ### Martingalas
 
-Se introduce el concepto de **martingalas**, clave en teoría de probabilidad moderna:
-
-- Definición de martingala  
-- Propiedades básicas  
-- Interpretación como "juegos justos"  
-
-Las martingalas son fundamentales en finanzas, teoría de apuestas y modelado estocástico.
+Se introduce el concepto de martingala, interpretada intuitivamente como un "juego justo" donde el valor esperado futuro, dado el presente, es igual al valor actual. Las martingalas son fundamentales en finanzas cuantitativas, teoría de apuestas y modelado estocástico moderno.
 
 ---
 
 ### Integración estocástica
 
-Se construye la integral estocástica de manera rigurosa:
+Se construye la integral estocástica de forma rigurosa:
 
-- Definición inicial para procesos simples (funciones escalonadas)  
-- Extensión mediante límite en media cuadrática ($L^2$)  
-- Motivación: superar limitaciones de definiciones clásicas  
+1. Se define inicialmente para procesos simples (funciones escalonadas)
+2. Se extiende mediante límite en media cuadrática (L²)
+3. Se motiva la necesidad de superar las limitaciones de las definiciones clásicas de integral
 
-Este enfoque permite definir integrales respecto al movimiento browniano, base del cálculo estocástico.
+Este enfoque permite definir integrales respecto al movimiento Browniano, que constituyen la base del cálculo estocástico y son esenciales para la valoración de derivados financieros.
 
 ---
 
-### Aplicaciones y conexión con otras áreas
+### Material
 
-El cálculo estocástico tiene aplicaciones en:
-
-- Finanzas cuantitativas  
-- Modelos de difusión  
-- Inteligencia Artificial  
-- Procesos de decisión  
-
-También se estudian ejemplos aplicados como:
-- Procesos de nacimiento y muerte  
-- Modelos dinámicos en sistemas aleatorios  
+Incluye notas teóricas, sets de problemas resueltos y material sobre movimiento Browniano, martingalas, cadenas de Markov en tiempo continuo, vectores gaussianos, la fórmula de Itô y el teorema de existencia de Daniell-Kolmogorov.
